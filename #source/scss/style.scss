@@ -117,6 +117,15 @@ nav {
       padding-right: 10px;
    }
 }
+
+.maininfo-text__title {
+      color: #2d2e32;
+      font-weight: bold;
+      font-size: 75px;
+      line-height: 85px;
+      margin-bottom: 30px;
+}
+
 .maininfo-tag {
 
    background-image: url(../img/emoji.png);
@@ -348,6 +357,10 @@ img{
   }
 }
 
+
+//  АДАПТИВ //  АДАПТИВ//  АДАПТИВ//  АДАПТИВ//  АДАПТИВ//  АДАПТИВ//  АДАПТИВ
+
+
 @media (min-width: 768px) {
   .container {
     max-width: 750px;
@@ -477,6 +490,13 @@ img{
 
 
 @media (max-width: 426px) {
+
+   .maininfo-text__title {
+      font-size: 65px;
+      line-height: 65px;
+   }
+
+
 .maininfo-tag {
     height: 280px;
     width: 280px;
