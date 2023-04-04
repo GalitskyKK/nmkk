@@ -351,7 +351,7 @@ img{
    background-color: #f9f9f9;
    display: flex;
    flex-direction: column;
-   height: 100vh;
+   // height: 100vh;
    padding: 15rem 0;
 }
 
@@ -476,6 +476,12 @@ img{
    .firstproj-text {
       margin: 0 auto;
    }
+
+   .project-content {
+      p:nth-child(2) {
+         line-height: 25px;
+      }
+   }
 }
 
 
@@ -484,8 +490,8 @@ img{
 @media (max-width: 767px) {
    
    .container {
-      // max-width: none;
-      padding: 0 15px;
+      max-width: none;
+      // padding: 0 15px;
    }
 
    .mobile-menu {
@@ -546,6 +552,14 @@ img{
     height: auto;
     text-align: center;
 }
+
+   .projectinfo {
+   // display: block;
+   }
+
+   .firstproj-text {
+      width: auto;
+   }
 }
 
 /* Для экранов шириной от 768px до 992px */
@@ -592,6 +606,15 @@ img{
    height: 280px;
    width: 280px;
    margin-right: 0;
+}
+
+.projectinfo {
+
+}
+.firstproj-text {
+   p:nth-child(2) {
+   }
+margin: 0 auto;
 }
 
 }

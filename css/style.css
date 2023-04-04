@@ -421,7 +421,6 @@ nav {
   background-color: #f9f9f9;
   display: flex;
   flex-direction: column;
-  height: 100vh;
   padding: 15rem 0;
 }
 
@@ -534,11 +533,14 @@ nav {
   .firstproj-text {
     margin: 0 auto;
   }
+  .project-content p:nth-child(2) {
+    line-height: 25px;
+  }
 }
 /* Для экранов шириной меньше 768px */
 @media (max-width: 767px) {
   .container {
-    padding: 0 15px;
+    max-width: none;
   }
   .mobile-menu {
     display: flex;
@@ -586,6 +588,9 @@ nav {
     height: auto;
     text-align: center;
   }
+  .firstproj-text {
+    width: auto;
+  }
 }
 /* Для экранов шириной от 768px до 992px */
 @media (min-width: 768px) and (max-width: 991px) {
@@ -616,5 +621,8 @@ nav {
     height: 280px;
     width: 280px;
     margin-right: 0;
+  }
+  .firstproj-text {
+    margin: 0 auto;
   }
 }
