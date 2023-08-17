@@ -379,27 +379,29 @@ img{
    }
 }
 .projectinfo {
-   // grid-gap: 5rem;
-    display: grid;
-   //  gap: 5rem;
-   //  grid-template-columns: 1fr;
-   //  grid-template-rows: auto auto;
+   grid-gap: 1rem;
+   display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1rem;
+    grid-template-rows: auto auto;
     height: auto;
     width: 100%;
 }
-.proj{
-   background-color: #fff;
-    border-radius: 25px;
-    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
-    display: flex;
+
+.projstack {
+   display: grid;
+   grid-template-columns: 50% 50%;
+   grid-template-rows: 50%;
 }
 
 .firstproj {
    display: flex;
-    flex-direction: row;
-    gap: 8rem;
-    height: 40rem;
+    flex-direction: column;
+    gap: 15px;
     padding: 2rem;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
 }
 .firstproj-img {
    //  background-color: hsla(0,0%,46%,.2);
@@ -418,7 +420,6 @@ img{
     height: auto;
     justify-content: center;
     text-align: center;
-    width: 30rem;
    p:nth-child(1) {
    color: #2d2e32;
     font-size: 35px;
@@ -438,6 +439,11 @@ img{
 
 //  АДАПТИВ //  АДАПТИВ//  АДАПТИВ//  АДАПТИВ//  АДАПТИВ//  АДАПТИВ//  АДАПТИВ
 
+@media (max-width: 700px) {
+.firstproj-img {
+   display: none;
+}
+}
 
 @media (min-width: 768px) {
   .container {
@@ -593,6 +599,12 @@ img{
    }
 }
 
+@media (max-width: 641px) {
+   .projstack {
+   display: block;
+}
+}
+
 
 @media (max-width: 426px) {
 
@@ -675,5 +687,3 @@ margin: 0 auto;
     background-color:#ddd; /* цвет заднего фона при наведении */
   }
 }
-
-
