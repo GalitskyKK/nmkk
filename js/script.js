@@ -2,10 +2,36 @@ const menuToggle = document.querySelector('.menu-toggle');
 
 menuToggle.addEventListener('click', function () {
    const menuItems = document.querySelector('.menu-items');
-   if (menuItems.style.display === 'block') {
-      menuItems.style.display = 'none';
-   } else {
-      menuItems.style.display = 'block';
+      if (menuItems.classList.contains('menu-items_hide') && !menuItems.classList.contains('menu-items_hiding')) {
+         menuItems.classList.remove('menu-items_hide');
+         menuItems.classList.add('menu-items_hiding')
+         window.setTimeout(() => {
+            menuItems.classList.remove('menu-items_hiding');
+         }, 150);
+   }
+   if (!menuItems.classList.contains('menu-items_hide') && !menuItems.classList.contains('menu-items_hiding')) {
+      menuItems.classList.remove('menu-items_hide');
+      menuItems.classList.add('menu-items_hiding')
+      window.setTimeout(() => {
+         menuItems.classList.add('menu-items_hide')
+         menuItems.classList.remove('menu-items_hiding');
+      }, 150);
+   }
+
+},
+);
+
+document.addEventListener('mouseup', function (e) {
+   const toggle = document.getElementById('menu');
+   var container = document.getElementById('menuToggle');
+
+   if (!container.contains(e.target)) {
+      toggle.classList.remove('menu-items_hide');
+      toggle.classList.add('menu-items_hiding')
+      window.setTimeout(() => {
+         toggle.classList.add('menu-items_hide')
+         toggle.classList.remove('menu-items_hiding');
+      }, 150);
    }
 });
 

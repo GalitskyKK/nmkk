@@ -164,7 +164,8 @@ nav {
 }
 
 .menu-items {
-  display: none;
+  transition: opacity 0.15s ease-in-out;
+  opacity: 1;
   flex-direction: column;
   margin: 0;
   padding: 0;
@@ -177,7 +178,6 @@ nav {
   background-color: #f7f7f7;
   box-shadow: 0 4px 50px -12px rgba(17, 12, 46, 0.16);
   padding: 10px;
-  display: none;
   z-index: 2;
 }
 .menu-items li {
@@ -195,13 +195,12 @@ nav {
   border-radius: 5px;
 }
 
-.show {
-  display: block;
+.menu-items_hide {
+  display: none;
 }
 
-.menu-toggle:focus + .menu-items,
-.menu-items:focus {
-  display: block;
+.menu-items_hiding {
+  opacity: 0;
 }
 
 .button-up {
@@ -240,6 +239,10 @@ nav {
   opacity: 0;
 }
 
+.button-up_hide {
+  display: none;
+}
+
 .button-up::before {
   content: "";
   width: 40px;
@@ -248,10 +251,6 @@ nav {
   background-size: 100% 100%;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2d2e32' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/%3E%3C/svg%3E");
   opacity: 0.5;
-}
-
-.button-up_hide {
-  display: none;
 }
 
 @media (hover: hover) and (pointer: fine) {
