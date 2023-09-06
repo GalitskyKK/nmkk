@@ -131,6 +131,20 @@ nav {
   margin-right: 15px;
 }
 
+.signin {
+  font-size: 17px;
+  font-weight: 600;
+  margin-right: 15px;
+  background-color: rgba(34, 34, 34, 0.8901960784);
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  transition: 300ms;
+}
+.signin:hover {
+  background-color: rgba(34, 34, 34, 0.6862745098);
+}
+
 .mobile-menu {
   display: none;
   justify-content: space-between;
@@ -189,6 +203,14 @@ nav {
   text-decoration: none;
   color: #333;
   font-weight: bold;
+}
+.menu-items a.login {
+  background-color: rgba(34, 34, 34, 0.8901960784);
+  border-radius: 5px;
+  color: #fff;
+}
+.menu-items a.login:hover {
+  background-color: rgba(34, 34, 34, 0.6862745098);
 }
 .menu-items a:hover {
   background-color: #ddd;
@@ -258,6 +280,103 @@ nav {
     background-color: #ddd; /* цвет заднего фона при наведении */
   }
 }
+.popup {
+  position: fixed;
+  top: -150%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1.25);
+  width: 480px;
+  padding: 20px 30px;
+  background: #ffffff;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  transition: top 0ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms, transform 200ms ease-in-out 0ms;
+  z-index: 999;
+}
+
+.popup.active {
+  top: 50%;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition: top 0ms ease-in-out 0ms, opacity 200ms ease-in-out 0ms, transform 200ms ease-in-out 0ms;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  background: rgba(34, 34, 34, 0.9607843137);
+  color: #eee;
+  text-align: center;
+  line-height: 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 300ms;
+}
+.close-btn:hover {
+  background: rgba(34, 34, 34, 0.6862745098);
+}
+
+.form h2 {
+  text-align: center;
+  color: #222;
+  margin: 10px 0 20px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.form-element {
+  margin: 15px 0px;
+}
+.form-element label {
+  font-size: 20px;
+  color: #222;
+  font-weight: 600;
+}
+.form-element label[for=remember] {
+  font-weight: 400;
+  font-size: 15px;
+}
+.form-element input[type=text], .form-element input[type=password] {
+  margin-top: 5px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+.form-element input[type=checkbox] {
+  margin-right: 5px;
+}
+.form-element button {
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  background: rgba(34, 34, 34, 0.9607843137);
+  color: #f5f5f5;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 300ms;
+}
+.form-element button:hover {
+  background: rgba(34, 34, 34, 0.6862745098);
+}
+.form-element a {
+  display: block;
+  text-align: right;
+  font-size: 15px;
+  color: #1a79ca;
+  text-decoration: none;
+  font-weight: 600;
+}
+
 .titleinfo {
   background-color: #f9f9f9;
   display: flex;
