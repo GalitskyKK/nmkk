@@ -725,6 +725,10 @@ img{
    .project-content p:nth-child(2) {
       text-align: center;
    }
+   .popup {
+   width: 380px;
+   padding: 20px 30px;
+}
 }
 
 /* Для экранов шириной от 768px до 992px */
@@ -776,5 +780,9 @@ img{
    p:nth-child(2) {
    }
 margin: 0 auto;
+}
+   .popup {
+   width: 280px;
+   padding: 20px 30px;
 }
 }
