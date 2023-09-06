@@ -21,6 +21,7 @@
       <nav>
          <div class="nav-logo"> <a href="#main">NMKK</a></div>
          <div class="nav-row">
+            <button class="signin" id="show-login" href="#">Sign In</button>
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
             <a href="#links">Links</a>
@@ -33,6 +34,7 @@
                <span></span>
             </div>
             <ul class="menu-items menu-items_hide" id="menu">
+               <li><a id="show-login-menu" class="login" href="#">Sign In</a></li>
                <li><a href="#about">About</a></li>
                <li><a href="#projects">Projects</a></li>
                <li><a href="#links">Links</a></li>
@@ -42,6 +44,31 @@
          </div>
       </nav>
       <div class="button-up button-up_hide"></div>
+      <!-- Pop-up Sign-in Panel -->
+      <div class="popup">
+         <div id="closebutton" class="close-btn">&times;</div>
+         <div class="form">
+            <h2>Log In</h2>
+            <div class="form-element">
+               <label for="email">Email</label>
+               <input type="text" id="email" placeholder="Enter Email">
+            </div>
+            <div class="form-element">
+               <label for="password">Password</label>
+               <input type="password" id="password" placeholder="Enter Password">
+            </div>
+            <div class="form-element">
+               <input type="checkbox" id="remember">
+               <label for="remember">Remember me</label>
+            </div>
+            <div class="form-element">
+               <button>Sign In</button>
+            </div>
+            <div class="form-element">
+               <a href="#">Forgot password ?</a>
+            </div>
+         </div>
+      </div>
       <!-- Main Section -->
       <section class="titleinfo" id="main">
          <div class="container">

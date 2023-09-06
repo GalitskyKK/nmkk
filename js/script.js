@@ -1,3 +1,14 @@
+document.querySelector("#show-login").addEventListener("click", function () {
+   document.querySelector(".popup").classList.add("active");
+});
+document.querySelector("#show-login-menu").addEventListener("click", function () {
+   document.querySelector(".popup").classList.add("active");
+});
+document.querySelector("#closebutton").addEventListener("click", function () {
+   document.querySelector(".popup").classList.remove("active");
+});
+
+
 const menuToggle = document.querySelector('.menu-toggle');
 
 menuToggle.addEventListener('click', function () {

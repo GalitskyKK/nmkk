@@ -48,6 +48,20 @@ nav {
    }
 }
 
+.signin {
+   font-size: 17px;
+   font-weight: 600;
+   margin-right: 15px;
+   background-color: #222222e3;
+   color: #fff;
+   padding: 5px;
+   border-radius: 5px;
+   transition: 300ms;
+   &:hover {
+      background-color: #222222af;
+   }
+}
+
 .mobile-menu {
    display: none;
    justify-content: space-between;
@@ -105,6 +119,14 @@ nav {
    text-decoration: none;
    color: #333;
    font-weight: bold;
+   }
+   a.login {
+      background-color: #222222e3;;
+      border-radius: 5px;
+      color: #fff;
+      &:hover {
+         background-color: #222222af;
+      }
    }
    a:hover {
    background-color: #ddd;
@@ -174,6 +196,102 @@ nav {
   .button-up:hover {
     background-color:#ddd; /* цвет заднего фона при наведении */
   }
+}
+
+//Pop-up Login Panel
+.popup {
+   position: fixed;
+   top: -150%;
+   left: 50%;
+   opacity: 0;
+   transform: translate(-50%,-50%) scale(1.25);
+   width: 480px;
+   padding: 20px 30px;
+   background: #ffffff;
+   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.15);
+   border-radius: 15px;
+   transition:top 0ms ease-in-out 200ms,opacity 200ms ease-in-out 0ms,transform 200ms ease-in-out 0ms;
+   z-index: 999;
+}
+.popup.active {
+   top: 50%;
+   opacity: 1;
+   transform: translate(-50%,-50%) scale(1);
+   transition:top 0ms ease-in-out 0ms,opacity 200ms ease-in-out 0ms,transform 200ms ease-in-out 0ms;
+}
+.close-btn {
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   width: 25px;
+   height: 25px;
+   background: #222222f5;
+   color: #eee;
+   text-align: center;
+   line-height: 25px;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 20px;
+   transition: 300ms;
+   &:hover {
+      background: #222222af;
+   }
+}
+.form {
+   h2 {
+      text-align: center;
+      color: #222;
+      margin: 10px 0 20px;
+      font-size: 25px;
+      font-weight: 600;
+   }
+}
+.form-element {
+   margin: 15px 0px;
+   label {
+      font-size: 20px;
+      color: #222;
+      font-weight: 600;
+   }
+   label[for="remember"] {
+      font-weight: 400;
+      font-size: 15px;
+   }
+   input[type="text"], input[type="password"] {
+      margin-top: 5px;
+      display: block;
+      width: 100%;
+      padding: 10px;
+      outline: none;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+   }
+   input[type="checkbox"] {
+      margin-right: 5px;
+   }
+   button {
+      width: 100%;
+      height: 40px;
+      border: none;
+      outline: none;
+      font-size: 15px;
+      background: #222222f5;
+      color: #f5f5f5;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 300ms;
+      &:hover {
+         background: #222222af;
+      }
+   }
+   a {
+      display: block;
+      text-align: right;
+      font-size: 15px;
+      color: #1a79ca;
+      text-decoration: none;
+      font-weight: 600;
+   }
 }
 
 // Main Section
